@@ -23,7 +23,7 @@ Split checks via reading receipts through photo recognition.
 **Required Must-have Stories**
 
 * User logs in to access Venmo payments
-* User takes a photo of the receipt
+* User uploads a photo of the receipt
 * User can add people to the bill and click and drap subtotals to these people
 * Settings (Accesibility, Notification, General, etc.) ????
 
@@ -35,36 +35,19 @@ Split checks via reading receipts through photo recognition.
 
 ### 2. Screen Archetypes
 
-* Login 
-* Register - User signs up or logs into their account
-   * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person. 
-   * ...
-* Messaging Screen - Chat for users to communicate (direct 1-on-1)
-   * Upon selecting music choice users matched and message screen opens
-* Profile Screen 
-   * Allows user to upload a photo and fill in information that is interesting to them and others
-* Song Selection Screen.
-   * Allows user to be able to choose their desired song, artist, genre of preference and begin listening and interacting with others.
-* Settings Screen
-   * Lets people change language, and app notification settings.
+* Login - users can log in with their venmo account
+* Prompting Screen - users will be prompted to upload a picture of their receipt, and names of people (username of venmo?)
+* Bill Splitting Screen - The receipt will be read and users will be able to associate subtotals to people (how will tax and tips work?)
+* (Optional) Venmo screen - shows the people that the user requested money to and status of the payment
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-
-* Music selection
-* Profile
-* Settings
-
-Optional:
-* Music/Encounter Queue
-* Discover (Top Choices)
+* Venmo Screen
 
 **Flow Navigation** (Screen to Screen)
-* Forced Log-in -> Account creation if no log in is available
-* Music Selection (Or Queue if Optional) -> Jumps to Chat
-* Profile -> Text field to be modified. 
-* Settings -> Toggle settings
+* Log-in -> Prompting Screen
+* Prompting Screen (with a button click?) -> Bill Splitting Screen
 
 ## Wireframes
 <img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
