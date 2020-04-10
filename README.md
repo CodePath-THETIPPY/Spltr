@@ -50,10 +50,8 @@ Split checks via reading receipts through photo recognition.
 * Prompting Screen (with a button click?) -> Bill Splitting Screen
 
 ## Wireframes
-<img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
-
-### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/lYHn37F.jpg" height=200>
-
-### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Login.png" width=800><br>
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Camera.png" width=800><br>
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Main.png" width=800><br>
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Item.png" width=800><br>
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Name.png" width=800><br>
