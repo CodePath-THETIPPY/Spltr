@@ -50,8 +50,10 @@ Split checks via reading receipts through photo recognition.
 * Prompting Screen (with a button click?) -> Bill Splitting Screen
 
 ## Wireframes
-<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Login.png" width=200>
-<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Camera.png" width=200>
-<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Main.png" width=200>
-<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Item.png" width=200>
-<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Name.png" width=200>
+<p float="left">
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Login.png" width=200 />
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Camera.png" width=200 />
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Main.png" width=200 />
+</p>
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Item.png" width=200 />
+<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Name.png" width=200 />
