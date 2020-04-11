@@ -59,3 +59,9 @@ Split checks via reading receipts through photo recognition.
 	<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Item.png" width=200 />
 	<img src="https://github.com/CodePath-THETIPPY/TheTippy/blob/master/Images/Wireframes/Name.png" width=200 />
 </p>
+
+## Schema
+###Models
+N/A
+###Networking
+Utilize Venmo API
