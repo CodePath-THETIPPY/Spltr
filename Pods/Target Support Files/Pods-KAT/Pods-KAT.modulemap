@@ -1,0 +1,6 @@
+framework module Pods_KAT {
+  umbrella header "Pods-KAT-umbrella.h"
+
+  export *
+  module * { export * }
+}

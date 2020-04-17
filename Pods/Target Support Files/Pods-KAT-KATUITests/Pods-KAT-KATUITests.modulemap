@@ -1,0 +1,6 @@
+framework module Pods_KAT_KATUITests {
+  umbrella header "Pods-KAT-KATUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
