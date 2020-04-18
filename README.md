@@ -62,6 +62,16 @@ Split checks via reading receipts through photo recognition.
 
 ## Schema
 ###Models
-N/A
-###Networking
-Utilize Venmo API
+
+Accounts
+| Property | Type | Description |
+| --- | --- | --- |
+| username | String | unique ID for each user |
+| password | String | password of the user |
+
+Receipts
+| Property | Type | Description |
+| --- | --- | --- |
+| receipt | File | an image of the receipt |
+| item | String | name of the item |
+| price | Number | the price of the item |
