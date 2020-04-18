@@ -22,28 +22,28 @@ Split checks via reading receipts through photo recognition.
 
 **Required Must-have Stories**
 
-* User logs in to access Venmo payments
-* User uploads a photo of the receipt
-* User can add people to the bill and click and drap subtotals to these people
-* Settings (Accesibility, Notification, General, etc.) ????
+- [ ] User logs in to reciept recognizer
+- [ ] User uploads a photo of the receipt
+- [ ] User can add people to the bill and click and drap subtotals to these people
+- [ ] Settings (Accesibility, Notification, General, etc.) ????
 
 **Optional Nice-to-have Stories**
 
-* Subtotal with item name
-* Delegate to Venmo to request payments
-* History of receipts
+- [ ] Subtotal with item name
+- [ ] Delegate to Venmo to request payments
+- [ ] History of receipts
 
 ### 2. Screen Archetypes
 
-* Login - users can log in with their venmo account
-* Prompting Screen - users will be prompted to upload a picture of their receipt, and names of people (username of venmo?)
+* Login - users can log in
+* Prompting Screen - users will be prompted to upload a picture of their receipt, and names of people
 * Bill Splitting Screen - The receipt will be read and users will be able to associate subtotals to people (how will tax and tips work?)
 * (Optional) Venmo screen - shows the people that the user requested money to and status of the payment
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
-* Venmo Screen
+* Switch between adding people to bill items and individual tabs
 
 **Flow Navigation** (Screen to Screen)
 * Log-in -> Prompting Screen
@@ -75,3 +75,10 @@ Receipts
 | receipt | File | an image of the receipt |
 | item | String | name of the item |
 | price | Number | the price of the item |
+
+
+## Video Walkthrough
+
+Here's a walkthrough of current progress:
+
+<img src='http://g.recordit.co/A4g2n1wwAJ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
