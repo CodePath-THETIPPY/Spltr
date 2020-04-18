@@ -61,7 +61,7 @@ Split checks via reading receipts through photo recognition.
 </p>
 
 ## Schema
-###Models
+### Models
 
 Accounts
 | Property | Type | Description |
