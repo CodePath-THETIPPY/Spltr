@@ -22,15 +22,17 @@ class BillViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        // change to amount of people on bill
         let count = 15
         
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
         
-        cell.textLabel?.text = "Name: \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillCell") as! BillTableViewCell
+        
         
         return cell
     }
