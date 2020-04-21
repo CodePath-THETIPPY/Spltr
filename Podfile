@@ -6,6 +6,7 @@ target 'KAT' do
   use_frameworks!
 
   # Pods for KAT
+  pod "Parse"
   pod 'AlamofireImage'
 
   target 'KATTests' do
