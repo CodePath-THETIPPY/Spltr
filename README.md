@@ -1,4 +1,4 @@
-# TheTippy (Working Name)
+# $pltr
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -81,4 +81,4 @@ Receipts
 
 Here's a walkthrough of current progress:
 
-<img src='http://g.recordit.co/A4g2n1wwAJ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/kjcqtBFRrg.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
