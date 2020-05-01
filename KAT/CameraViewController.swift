@@ -8,7 +8,10 @@
 
 import UIKit
 import AlamofireImage
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+import TesseractOCR
+import Parse
+
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
     @IBOutlet weak var cameraImageView: UIImageView!
     
@@ -44,6 +47,30 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         cameraImageView.image = scaledImage
         
         dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func onSplitBillButton(_ sender: Any) {
+        let receipt = PFObject(className: "receipt")
+        
+        receipt["user"] = PFUser.current()
+        let imageData = cameraImageView.image!.pngData()
+        
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        receipt["image"] = file
+        
+        // photo recognize receipt
+        
+        receipt.saveInBackground { (success, error) in
+            if success {
+                //add command to move to next screen
+                print("saved")
+            } else {
+                print("failed")
+            }
+        }
         
     }
     /*

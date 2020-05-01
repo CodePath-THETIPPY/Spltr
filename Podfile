@@ -8,6 +8,7 @@ target 'KAT' do
   # Pods for KAT
   pod "Parse"
   pod 'AlamofireImage'
+  pod 'TesseractOCRiOS'
 
   target 'KATTests' do
     inherit! :search_paths
