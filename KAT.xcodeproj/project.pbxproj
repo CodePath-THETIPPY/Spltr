@@ -18,7 +18,7 @@
 		49ABC379244EB6DC000948D7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABC378244EB6DC000948D7 /* ItemsViewController.swift */; };
 		49ABC37B244EC455000948D7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABC37A244EC455000948D7 /* LogInViewController.swift */; };
 		67180D2C2449717B00E7E513 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67180D2B2449717B00E7E513 /* CameraViewController.swift */; };
-		67415765245BC83C0000F791 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 67415764245BC83C0000F791 /* tessdata */; };
+		674004E8245CA5DC005D9C29 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 674004E7245CA5DC005D9C29 /* tessdata */; };
 		6758BC12244A6462003F69C7 /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758BC11244A6462003F69C7 /* BillViewController.swift */; };
 		6758BC14244AACC6003F69C7 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */; };
 		6758BC16244AAD37003F69C7 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758BC15244AAD37003F69C7 /* BillTableViewCell.swift */; };
@@ -64,7 +64,7 @@
 		49ABC37A244EC455000948D7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5D54E51E1364E89D8BAE4397 /* Pods-KATTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KATTests.debug.xcconfig"; path = "Target Support Files/Pods-KATTests/Pods-KATTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67180D2B2449717B00E7E513 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		67415764245BC83C0000F791 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		674004E7245CA5DC005D9C29 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		6758BC0F244A6410003F69C7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = /Users/tuanh/Documents/TheTippy/KAT/ItemsViewController.swift; sourceTree = "<absolute>"; };
 		6758BC11244A6462003F69C7 /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 		6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				4904DB452442516B00B9C007 /* AppDelegate.swift */,
-				67415764245BC83C0000F791 /* tessdata */,
 				4904DB472442516B00B9C007 /* SceneDelegate.swift */,
+				674004E7245CA5DC005D9C29 /* tessdata */,
 				4904DB4B2442516B00B9C007 /* Main.storyboard */,
 				6758BC15244AAD37003F69C7 /* BillTableViewCell.swift */,
 				6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */,
@@ -298,7 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4904DB522442516D00B9C007 /* LaunchScreen.storyboard in Resources */,
-				67415765245BC83C0000F791 /* tessdata in Resources */,
+				674004E8245CA5DC005D9C29 /* tessdata in Resources */,
 				4904DB4F2442516D00B9C007 /* Assets.xcassets in Resources */,
 				4904DB4D2442516B00B9C007 /* Main.storyboard in Resources */,
 			);
