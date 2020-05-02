@@ -125,6 +125,7 @@ extension UIImage {
     // 6
     return scaledImage
   }
+    
   func preprocessedImage() -> UIImage? {
       // 1
       let stillImageFilter = GPUImageAdaptiveThresholdFilter()
