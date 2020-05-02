@@ -58,12 +58,11 @@
 		4904DB632442516D00B9C007 /* KATUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KATUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4904DB672442516D00B9C007 /* KATUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KATUITests.swift; sourceTree = "<group>"; };
 		4904DB692442516D00B9C007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49ABC378244EB6DC000948D7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = KAT/ItemsViewController.swift; sourceTree = "<group>"; };
+		49ABC378244EB6DC000948D7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		49ABC37A244EC455000948D7 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5D54E51E1364E89D8BAE4397 /* Pods-KATTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KATTests.debug.xcconfig"; path = "Target Support Files/Pods-KATTests/Pods-KATTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67180D2B2449717B00E7E513 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		674004E7245CA5DC005D9C29 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
-		6758BC0F244A6410003F69C7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = /Users/tuanh/Documents/TheTippy/KAT/ItemsViewController.swift; sourceTree = "<absolute>"; };
 		6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		79D136FB3979BA872D077B21 /* Pods_KAT_KATUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAT_KATUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B6D4E6AFF93114CDFC5EE9 /* Pods_KATTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KATTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +102,6 @@
 		4904DB392442516B00B9C007 = {
 			isa = PBXGroup;
 			children = (
-				49ABC378244EB6DC000948D7 /* ItemsViewController.swift */,
 				4904DB442442516B00B9C007 /* KAT */,
 				4904DB5B2442516D00B9C007 /* KATTests */,
 				4904DB662442516D00B9C007 /* KATUITests */,
@@ -135,7 +133,7 @@
 				4904DB502442516D00B9C007 /* LaunchScreen.storyboard */,
 				4904DB532442516D00B9C007 /* Info.plist */,
 				67180D2B2449717B00E7E513 /* CameraViewController.swift */,
-				6758BC0F244A6410003F69C7 /* ItemsViewController.swift */,
+				49ABC378244EB6DC000948D7 /* ItemsViewController.swift */,
 				49ABC37A244EC455000948D7 /* LogInViewController.swift */,
 			);
 			path = KAT;
