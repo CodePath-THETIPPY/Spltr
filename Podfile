@@ -1,3 +1,4 @@
+
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -8,6 +9,8 @@ target 'KAT' do
   # Pods for KAT
   pod "Parse"
   pod 'AlamofireImage'
+  pod 'TesseractOCRiOS'
+  pod 'GPUImage'
 
   target 'KATTests' do
     inherit! :search_paths

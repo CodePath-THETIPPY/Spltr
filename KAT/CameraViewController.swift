@@ -8,8 +8,13 @@
 
 import UIKit
 import AlamofireImage
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+import TesseractOCR
+import Parse
+import GPUImage
+
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var cameraImageView: UIImageView!
     
     
@@ -46,6 +51,49 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
         
     }
+
+    @IBAction func onSplitBillButton(_ sender: Any) {
+        
+        let receipt = PFObject(className: "receipt")
+        
+        receipt["user"] = PFUser.current()
+        
+        let imageData = cameraImageView.image!.pngData()
+        
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        let image = cameraImageView.image!
+        
+        receipt["image"] = file
+        
+        let scaledImage = image.scaledImage(1000) ?? image
+        
+        let preprocessedImage = scaledImage.preprocessedImage() ?? scaledImage
+        // photo recognize receipt
+        // 1
+        if let tesseract = G8Tesseract(language: "eng") {
+          // 2
+          tesseract.engineMode = .tesseractCubeCombined
+          // 3
+          tesseract.pageSegmentationMode = .auto
+          // 4
+          tesseract.image = preprocessedImage
+          // 5
+          tesseract.recognize()
+          // 6
+          textLabel.text = tesseract.recognizedText
+        }
+        
+        receipt.saveInBackground { (success, error) in
+            if success {
+                //add command to move to next screen
+                print("saved")
+            } else {
+                print("failed")
+            }
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -56,4 +104,36 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     */
 
+}
+
+extension UIImage {
+  // 2
+  func scaledImage(_ maxDimension: CGFloat) -> UIImage? {
+    // 3
+    var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+    // 4
+    if size.width > size.height {
+      scaledSize.height = size.height / size.width * scaledSize.width
+    } else {
+      scaledSize.width = size.width / size.height * scaledSize.height
+    }
+    // 5
+    UIGraphicsBeginImageContext(scaledSize)
+    draw(in: CGRect(origin: .zero, size: scaledSize))
+    let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    // 6
+    return scaledImage
+  }
+    
+  func preprocessedImage() -> UIImage? {
+      // 1
+      let stillImageFilter = GPUImageAdaptiveThresholdFilter()
+      // 2
+      stillImageFilter.blurRadiusInPixels = 15.0
+      // 3
+      let filteredImage = stillImageFilter.image(byFilteringImage: self)
+      // 4
+      return filteredImage
+  }
 }
