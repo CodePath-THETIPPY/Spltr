@@ -15,7 +15,11 @@ import GPUImage
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
     @IBOutlet weak var textLabel: UILabel!
+    
+    @IBOutlet weak var textLabel2: UILabel!
+    
     @IBOutlet weak var cameraImageView: UIImageView!
+
     
     
     override func viewDidLoad() {
@@ -82,6 +86,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
           tesseract.recognize()
           // 6
           textLabel.text = tesseract.recognizedText
+    
+        
+            
+        
+         
+            
         }
         
         receipt.saveInBackground { (success, error) in

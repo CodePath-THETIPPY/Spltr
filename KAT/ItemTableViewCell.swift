@@ -16,6 +16,9 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     
     
+    @IBAction func onAdd(_ sender: Any) {
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

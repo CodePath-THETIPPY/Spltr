@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KSm-gT-Fy4">
-                                <rect key="frame" x="0.0" y="45" width="414" height="690"/>
+                                <rect key="frame" x="0.0" y="45" width="414" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2258763234" green="0.61945433940000005" blue="0.4328470009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,6 +135,20 @@
                                     <outletCollection property="gestureRecognizers" destination="hup-Dh-yz7" appends="YES" id="omg-0i-3HB"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98U-jQ-2XJ" customClass="textLabel">
+                                <rect key="frame" x="20" y="484" width="374" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLT-uj-fTy">
+                                <rect key="frame" x="20" y="548" width="350" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ik8-CQ-2fn"/>
@@ -144,12 +158,14 @@
                             <color key="tintColor" red="0.2258763234" green="0.61945433940000005" blue="0.4328470009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="onSplitBillButton:" destination="ELt-4b-cNz" id="677-xe-KDe"/>
-                                <segue destination="gm7-GV-XSw" kind="presentation" id="sSK-K6-T3d"/>
+                                <segue destination="gm7-GV-XSw" kind="presentation" id="al0-qi-dZr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cameraImageView" destination="KSm-gT-Fy4" id="i05-m7-3Xw"/>
+                        <outlet property="textLabel" destination="98U-jQ-2XJ" id="nRy-hz-ZCi"/>
+                        <outlet property="textLabel2" destination="yLT-uj-fTy" id="K9k-14-RlN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bd4-Ee-oME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,6 +218,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.2258763234" green="0.61945433940000005" blue="0.4328470009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="onAdd:" destination="ido-q7-6RL" eventType="touchUpInside" id="gUy-qY-FE4"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -291,7 +310,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.fill" catalog="system" width="128" height="96"/>
-        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

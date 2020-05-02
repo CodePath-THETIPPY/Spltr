@@ -24,12 +24,38 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // change to correct count from reciept
-        let count = 10
+        let count = 4
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:    "ItemCell") as! ItemTableViewCell
+        
+        
+        if(indexPath.row == 0)
+        {
+            cell.Item.text = "SM Calamari"
+            cell.priceLabel.text = "$11.98"
+        }
+        
+        if(indexPath.row == 1)
+        {
+            cell.Item.text = "Lobster Roll"
+            cell.priceLabel.text = "$25.00"
+        }
+        
+        if(indexPath.row == 2)
+        {
+            cell.Item.text = "Kale Salad - Shrimp"
+            cell.priceLabel.text = "$18.00"
+        }
+        
+        if(indexPath.row == 3)
+        {
+            cell.Item.text = "Snapper Entree"
+            cell.priceLabel.text = "$28.00"
+        }
+        
         
         return cell
     }
