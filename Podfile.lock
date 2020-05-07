@@ -8,12 +8,14 @@ PODS:
     - Parse/Core (= 1.18.0)
   - Parse/Core (1.18.0):
     - Bolts/Tasks (= 1.9.1)
+  - SearchTextField (1.2.4)
   - TesseractOCRiOS (5.0.1)
 
 DEPENDENCIES:
   - AlamofireImage
   - GPUImage
   - Parse
+  - SearchTextField
   - TesseractOCRiOS
 
 SPEC REPOS:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - Bolts
     - GPUImage
     - Parse
+    - SearchTextField
     - TesseractOCRiOS
 
 SPEC CHECKSUMS:
@@ -31,8 +34,9 @@ SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
+  SearchTextField: 40dc3cc57def5a211f263cac263622c163bbc25a
   TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
 
-PODFILE CHECKSUM: 97e1855febb3fafb8f47527fa6d74ecba0d2b894
+PODFILE CHECKSUM: 0db89d9518389eedef14ca28ce688b015ecbd6cf
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
