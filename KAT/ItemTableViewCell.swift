@@ -8,20 +8,16 @@
 
 import UIKit
 
-class ItemTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var Item: UILabel!
-    
-    
     @IBOutlet weak var priceLabel: UILabel!
-    
-    
-    @IBAction func onAdd(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var nameTextField: SearchTextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        nameTextField.delegate = self
         // Initialization code
     }
 
