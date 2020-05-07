@@ -36,8 +36,8 @@ Split checks via reading receipts through photo recognition.
 ### 2. Screen Archetypes
 
 * Login - users can log in
-* Prompting Screen - users will be prompted to upload a picture of their receipt, and names of people
-* Bill Splitting Screen - The receipt will be read and users will be able to associate subtotals to people (how will tax and tips work?)
+* Prompting Screen - users will be prompted to upload a picture of their receipt and we will use an OCR to parse the bill
+* Bill Splitting Screen - Displays items and the costs, users can add people to the item in order to split the bill
 * (Optional) Venmo screen - shows the people that the user requested money to and status of the payment
 
 ### 3. Navigation
@@ -47,7 +47,7 @@ Split checks via reading receipts through photo recognition.
 
 **Flow Navigation** (Screen to Screen)
 * Log-in -> Prompting Screen
-* Prompting Screen (with a button click?) -> Bill Splitting Screen
+* Prompting Screen -> Bill Splitting Screen
 
 ## Wireframes
 <p float="left">
