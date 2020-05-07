@@ -31,22 +31,33 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return count
     }
     
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:    "ItemCell") as! ItemTableViewCell
         
+               
+               
+           
+        
         cell.nameTextField.delegate = self
         cell.nameTextField.filterStrings(fetchContacts())
+       
         
         if(indexPath.row == 0)
         {
             cell.Item.text = "SM Calamari"
             cell.priceLabel.text = "$11.98"
+            
+            
         }
         
         if(indexPath.row == 1)
         {
             cell.Item.text = "Lobster Roll"
             cell.priceLabel.text = "$25.00"
+            
+            
         }
         
         if(indexPath.row == 2)
@@ -65,9 +76,11 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    /*
     func textFieldDidEndEditing(_ textField: UITextField) {
         let indexOf =
     }
+ */
     
     private func fetchContacts() -> Array<String> {
         print("Attempting to fetch contacts...")
