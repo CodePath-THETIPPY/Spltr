@@ -9,7 +9,7 @@ import UIKit
 import Contacts
 import SearchTextField
 
-class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var itemsTableView: UITableView!
     
@@ -34,6 +34,7 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:    "ItemCell") as! ItemTableViewCell
         
+        cell.nameTextField.delegate = self
         cell.nameTextField.filterStrings(fetchContacts())
         
         if(indexPath.row == 0)
@@ -62,6 +63,10 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         return cell
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let indexOf =
     }
     
     private func fetchContacts() -> Array<String> {
@@ -98,6 +103,7 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         return contacts
     }
+    
     
     /*
     // MARK: - Navigation
