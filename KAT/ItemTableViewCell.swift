@@ -13,10 +13,15 @@ class ItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var Item: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var nameTextField: SearchTextField!
+    @IBOutlet weak var addButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        addButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        addButton.layer.shadowRadius = 5
+        addButton.layer.shadowColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        addButton.layer.shadowOpacity = 1.0
         
         // Initialization code
     }
@@ -26,42 +31,5 @@ class ItemTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-/*
-    func fetchContacts() -> Array<String> {
-        print("Attempting to fetch contacts...")
-        
-        let store = CNContactStore()
-        var contacts = [String]()
-        
-        store.requestAccess(for: .contacts) { (granted, err) in
-            if let err = err {
-                print("Failed to request access: ", err)
-                return
-            }
-            if granted {
-                print("Access granted")
-                
-                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
-                let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-                
-                do {
-                    try store.enumerateContacts(with: request)  { (contact, stopPointerIfYouWantToStopEnumerating) in
-                        // print(contact.givenName)
-                        // print(contact.familyName)
-                        let fullName = contact.givenName + " " + contact.familyName
-                        contacts.append(fullName)
-                    }
-                } catch let err {
-                    print("Failed to enumerate contacts: ", err);
-                }
-                print(contacts)
-            } else {
-                print("Access denied...")
-            }
-        }
-        return contacts
-    }
-*/
     
 }

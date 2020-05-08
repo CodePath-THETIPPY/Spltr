@@ -12,6 +12,7 @@ target 'KAT' do
   pod 'TesseractOCRiOS'
   pod 'GPUImage'
   pod 'SearchTextField'
+  pod 'BulletinBoard'
 
   target 'KATTests' do
     inherit! :search_paths

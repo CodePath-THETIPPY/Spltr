@@ -8,6 +8,7 @@
 import UIKit
 import Contacts
 import SearchTextField
+import BLTNBoard
 
 class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
@@ -31,18 +32,11 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return count
     }
     
-
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:    "ItemCell") as! ItemTableViewCell
+        let cell = itemsTableView.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemTableViewCell
         
-               
-               
-           
-        
-        cell.nameTextField.delegate = self
-        cell.nameTextField.filterStrings(fetchContacts())
-       
+        // cell.nameTextField.delegate = self
+        // cell.nameTextField.filterStrings(fetchContacts())
         
         if(indexPath.row == 0)
         {
@@ -75,12 +69,6 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return cell
     }
-    
-    /*
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        let indexOf =
-    }
- */
     
     private func fetchContacts() -> Array<String> {
         print("Attempting to fetch contacts...")
@@ -117,6 +105,19 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return contacts
     }
     
+    lazy var bulletinManager: BLTNItemManager = {
+        let page = NameTextFieldBulletinPageItem(title: "Recipient")
+        
+        page.descriptionText = "Enter a recipient."
+        page.actionButtonTitle = "Enter"
+        page.alternativeButtonTitle = "Cancel"
+        
+        let rootItem: BLTNItem = page
+        rootItem.isDismissable = true
+        rootItem.requiresCloseButton = false
+        
+        return BLTNItemManager(rootItem: rootItem)
+    }()
     
     /*
     // MARK: - Navigation

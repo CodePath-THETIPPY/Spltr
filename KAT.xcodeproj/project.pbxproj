@@ -23,6 +23,7 @@
 		A4CE652F8FBBA42E19D7DB92 /* Pods_KAT_KATUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D136FB3979BA872D077B21 /* Pods_KAT_KATUITests.framework */; };
 		CDA5BCFEAE6D4123004BD19B /* Pods_KATTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B6D4E6AFF93114CDFC5EE9 /* Pods_KATTests.framework */; };
 		FA13B22824640301006785B4 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B22724640301006785B4 /* SearchTextField.swift */; };
+		FA13B22E2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B22D2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DDD9461A5F2EE090A12E18B5 /* Pods-KAT-KATUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAT-KATUITests.debug.xcconfig"; path = "Target Support Files/Pods-KAT-KATUITests/Pods-KAT-KATUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F91C1ECBD03CAC42006EFEE2 /* Pods-KAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAT.debug.xcconfig"; path = "Target Support Files/Pods-KAT/Pods-KAT.debug.xcconfig"; sourceTree = "<group>"; };
 		FA13B22724640301006785B4 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		FA13B22D2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldBulletinPageItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				49ABC378244EB6DC000948D7 /* ItemsViewController.swift */,
 				FA13B22724640301006785B4 /* SearchTextField.swift */,
 				49ABC37A244EC455000948D7 /* LogInViewController.swift */,
+				FA13B22D2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift */,
 			);
 			path = KAT;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				49ABC37B244EC455000948D7 /* LogInViewController.swift in Sources */,
 				4904DB482442516B00B9C007 /* SceneDelegate.swift in Sources */,
 				FA13B22824640301006785B4 /* SearchTextField.swift in Sources */,
+				FA13B22E2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift in Sources */,
 				6758BC14244AACC6003F69C7 /* ItemTableViewCell.swift in Sources */,
 				67180D2C2449717B00E7E513 /* CameraViewController.swift in Sources */,
 			);
