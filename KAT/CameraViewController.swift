@@ -14,7 +14,7 @@ import GPUImage
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
-    @IBOutlet weak var textLabel: UILabel!
+    // @IBOutlet weak var textLabel: UILabel!
     
     @IBOutlet weak var textLabel2: UILabel!
     
@@ -57,6 +57,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
 
     @IBAction func onSplitBillButton(_ sender: Any) {
+        print("testing")
         
         let receipt = PFObject(className: "receipt")
         
@@ -73,25 +74,22 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let scaledImage = image.scaledImage(1000) ?? image
         
         let preprocessedImage = scaledImage.preprocessedImage() ?? scaledImage
+        print("Photo recognizing receipt...")
         // photo recognize receipt
         // 1
         if let tesseract = G8Tesseract(language: "eng") {
-          // 2
-          tesseract.engineMode = .tesseractCubeCombined
-          // 3
-          tesseract.pageSegmentationMode = .auto
-          // 4
-          tesseract.image = preprocessedImage
-          // 5
-          tesseract.recognize()
-          // 6
-          textLabel.text = tesseract.recognizedText
-    
-        
+            // 2
+            tesseract.engineMode = .tesseractCubeCombined
+            // 3
+            tesseract.pageSegmentationMode = .auto
+            // 4
+            tesseract.image = preprocessedImage
+            // 5
+            tesseract.recognize()
+            // 6
+            let textLabel = tesseract.recognizedText
             
-        
-         
-            
+            print(textLabel ?? "User instance is nil")
         }
         
         receipt.saveInBackground { (success, error) in

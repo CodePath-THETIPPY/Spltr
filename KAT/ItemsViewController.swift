@@ -10,14 +10,18 @@ import Contacts
 import SearchTextField
 import BLTNBoard
 
-class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var itemsTableView: UITableView!
+
+    
     
     // let nameTextField = SearchTextField(frame: CGRect(x: 10, y: 100, width: 200, height: 40))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
@@ -66,58 +70,10 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.priceLabel.text = "$28.00"
         }
         
-        
         return cell
     }
     
-    private func fetchContacts() -> Array<String> {
-        print("Attempting to fetch contacts...")
-        
-        let store = CNContactStore()
-        var contacts = [String]()
-        
-        store.requestAccess(for: .contacts) { (granted, err) in
-            if let err = err {
-                print("Failed to request access: ", err)
-                return
-            }
-            if granted {
-                print("Access granted")
-                
-                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey]
-                let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-                
-                do {
-                    try store.enumerateContacts(with: request)  { (contact, stopPointerIfYouWantToStopEnumerating) in
-                        // print(contact.givenName)
-                        // print(contact.familyName)
-                        let fullName = contact.givenName + " " + contact.familyName
-                        contacts.append(fullName)
-                    }
-                } catch let err {
-                    print("Failed to enumerate contacts: ", err);
-                }
-                print(contacts)
-            } else {
-                print("Access denied...")
-            }
-        }
-        return contacts
-    }
     
-    lazy var bulletinManager: BLTNItemManager = {
-        let page = NameTextFieldBulletinPageItem(title: "Recipient")
-        
-        page.descriptionText = "Enter a recipient."
-        page.actionButtonTitle = "Enter"
-        page.alternativeButtonTitle = "Cancel"
-        
-        let rootItem: BLTNItem = page
-        rootItem.isDismissable = true
-        rootItem.requiresCloseButton = false
-        
-        return BLTNItemManager(rootItem: rootItem)
-    }()
     
     /*
     // MARK: - Navigation
