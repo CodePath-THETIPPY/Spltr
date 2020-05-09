@@ -134,6 +134,7 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(indexPath.row == 0)
         {
             cell.Item.text = "SM Calamari"
+            cell.costPerPerson = 11.98
             cell.priceLabel.text = "$11.98"
 
         }
@@ -141,18 +142,21 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(indexPath.row == 1)
         {
             cell.Item.text = "Lobster Roll"
+            cell.costPerPerson = 25.00
             cell.priceLabel.text = "$25.00"
         }
         
         if(indexPath.row == 2)
         {
             cell.Item.text = "Kale Salad - Shrimp"
+            cell.costPerPerson = 18.00
             cell.priceLabel.text = "$18.00"
         }
         
         if(indexPath.row == 3)
         {
             cell.Item.text = "Snapper Entree"
+            cell.costPerPerson = 28.00
             cell.priceLabel.text = "$28.00"
         }
         

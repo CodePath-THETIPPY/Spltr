@@ -17,6 +17,7 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     var indexPath: IndexPath!
     var delegate: ContactsPickingDelegate!
     var selectedNames = [String]()
+    var costPerPerson: Double = 0.0
     
     @IBAction func btnAddRecipient(_ sender: Any) {
         // tell the VC to pull up the picker for indexpath
@@ -32,7 +33,7 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
         
         recipientsLabel.text = selectedNames.joined(separator: ", ")
         let divideBy = Double(selectedNames.count)
-        priceLabel.text = String(divideBy)
+        priceLabel.text = String(format: "$%.2f", (costPerPerson / divideBy))
     }
     
     var selectedContacts = [String]()
