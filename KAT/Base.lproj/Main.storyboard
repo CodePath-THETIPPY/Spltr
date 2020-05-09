@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tr7-Xk-aGu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="alex" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tr7-Xk-aGu">
                                 <rect key="frame" x="99" y="401" width="216" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216" id="KGa-av-lg1"/>
@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIl-q5-Yzc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jeff" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIl-q5-Yzc">
                                 <rect key="frame" x="99" y="458" width="216" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216" id="4ht-MG-dT9"/>
@@ -159,10 +159,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" id="ido-q7-6RL" customClass="ItemTableViewCell" customModule="KAT" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="114.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ido-q7-6RL" id="DuT-zQ-D2B">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="114.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNn-Py-AVe">
@@ -184,27 +184,43 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIb-Hz-zS1">
-                                                    <rect key="frame" x="14" y="69" width="386" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipients..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-sW-yy5">
+                                                    <rect key="frame" x="14" y="71" width="93.5" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="VGN-JL-k7A"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmH-K4-sig">
+                                                    <rect key="frame" x="291" y="67" width="103" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="103" id="6D8-Mu-uaQ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Add Recipients"/>
+                                                    <connections>
+                                                        <action selector="btnAddRecipient:" destination="ido-q7-6RL" eventType="touchUpInside" id="sOD-Sj-FUf"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mIb-Hz-zS1" firstAttribute="leading" secondItem="DuT-zQ-D2B" secondAttribute="leading" constant="14" id="Cpf-2w-X94"/>
+                                                <constraint firstItem="UmH-K4-sig" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="C0k-sW-yy5" secondAttribute="trailing" constant="8" id="Eoh-4M-4cI"/>
+                                                <constraint firstItem="UmH-K4-sig" firstAttribute="top" secondItem="C0k-sW-yy5" secondAttribute="top" constant="-4" id="Feh-LO-T1v"/>
+                                                <constraint firstItem="C0k-sW-yy5" firstAttribute="top" secondItem="uJG-Kt-yOc" secondAttribute="bottom" constant="10" id="Knr-Ju-CMJ"/>
+                                                <constraint firstItem="uJG-Kt-yOc" firstAttribute="leading" secondItem="DuT-zQ-D2B" secondAttribute="leading" constant="14" id="P1I-fS-880"/>
                                                 <constraint firstItem="uJG-Kt-yOc" firstAttribute="top" secondItem="LNn-Py-AVe" secondAttribute="bottom" constant="8" id="PTo-Ad-81R"/>
-                                                <constraint firstItem="mIb-Hz-zS1" firstAttribute="top" secondItem="uJG-Kt-yOc" secondAttribute="bottom" constant="8" id="Soz-HZ-RaY"/>
                                                 <constraint firstItem="LNn-Py-AVe" firstAttribute="top" secondItem="DuT-zQ-D2B" secondAttribute="top" constant="11" id="XIn-9u-QZs"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mIb-Hz-zS1" secondAttribute="bottom" constant="11" id="dNH-Ym-Q3U"/>
                                                 <constraint firstItem="LNn-Py-AVe" firstAttribute="leading" secondItem="DuT-zQ-D2B" secondAttribute="leading" constant="14" id="ehX-EK-5rd"/>
-                                                <constraint firstItem="uJG-Kt-yOc" firstAttribute="leading" secondItem="DuT-zQ-D2B" secondAttribute="leading" constant="14" id="ft8-O7-i4C"/>
-                                                <constraint firstAttribute="trailing" secondItem="mIb-Hz-zS1" secondAttribute="trailing" constant="14" id="fy7-9o-hCd"/>
+                                                <constraint firstItem="C0k-sW-yy5" firstAttribute="leading" secondItem="DuT-zQ-D2B" secondAttribute="leading" constant="14" id="tXL-Pt-jLB"/>
+                                                <constraint firstItem="UmH-K4-sig" firstAttribute="trailing" secondItem="DuT-zQ-D2B" secondAttribute="trailingMargin" id="yIg-Ko-HEW"/>
+                                                <constraint firstAttribute="bottom" secondItem="C0k-sW-yy5" secondAttribute="bottom" constant="21.5" id="ysw-aF-oa0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="Item" destination="LNn-Py-AVe" id="SVY-yc-CLW"/>
                                             <outlet property="priceLabel" destination="uJG-Kt-yOc" id="NGx-hI-BS5"/>
-                                            <outlet property="recipientsTextField" destination="mIb-Hz-zS1" id="Qh7-e1-jNC"/>
+                                            <outlet property="recipientsLabel" destination="C0k-sW-yy5" id="jM2-oe-NMS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
