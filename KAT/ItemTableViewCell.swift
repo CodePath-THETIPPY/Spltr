@@ -19,6 +19,9 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
     
     var contacts = [String]()
     var addingAnotherContact = [String]()
+    var amount: ItemsViewController = ItemsViewController(nibName: nil, bundle: nil)
+    var price: Double = 0.0
+    var count: Double = 0.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,8 +45,6 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
 
         // Configure the view for the selected state
     }
-    
-    
     
     private func fetchContacts() -> Array<String> {
         print("Attempting to fetch contacts...")
@@ -77,6 +78,7 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
                 print("Access denied...")
             }
         }
+        
         return contacts
     }
     
@@ -102,6 +104,18 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
         if addingAnotherContact.count > 1 {
             recipientsTextField.text = addingAnotherContact.joined(separator: ", ")
         }
+        print("didSelectRow")
+        print(addingAnotherContact)
+        count = Double(addingAnotherContact.count)
+    }
+    
+    func getAmount(p: Double) -> Double {
+        let newPrice = p / count
+        print(p)
+        print(count)
+        print(addingAnotherContact.count)
+        print(newPrice)
+        return newPrice
     }
     
     func createPickerView() {

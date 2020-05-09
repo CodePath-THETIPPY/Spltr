@@ -13,15 +13,11 @@ import BLTNBoard
 class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var itemsTableView: UITableView!
-
-    
     
     // let nameTextField = SearchTextField(frame: CGRect(x: 10, y: 100, width: 200, height: 40))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
@@ -44,9 +40,10 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         if(indexPath.row == 0)
         {
+            print("testing")
             cell.Item.text = "SM Calamari"
             cell.priceLabel.text = "$11.98"
-            
+            print(cell.getAmount(p: 11.98))
             
         }
         
@@ -69,11 +66,10 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.Item.text = "Snapper Entree"
             cell.priceLabel.text = "$28.00"
         }
+        itemsTableView.reloadData()
         
         return cell
     }
-    
-    
     
     /*
     // MARK: - Navigation
