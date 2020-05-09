@@ -41,8 +41,6 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
         // Configure the view for the selected state
     }
     
-    
-    
     private func fetchContacts() -> Array<String> {
         print("Attempting to fetch contacts...")
         
