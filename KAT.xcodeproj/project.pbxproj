@@ -11,7 +11,6 @@
 		4904DB462442516B00B9C007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4904DB452442516B00B9C007 /* AppDelegate.swift */; };
 		4904DB482442516B00B9C007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4904DB472442516B00B9C007 /* SceneDelegate.swift */; };
 		4904DB4D2442516B00B9C007 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4904DB4B2442516B00B9C007 /* Main.storyboard */; };
-		4904DB4F2442516D00B9C007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4904DB4E2442516D00B9C007 /* Assets.xcassets */; };
 		4904DB522442516D00B9C007 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4904DB502442516D00B9C007 /* LaunchScreen.storyboard */; };
 		4904DB5D2442516D00B9C007 /* KATTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4904DB5C2442516D00B9C007 /* KATTests.swift */; };
 		4904DB682442516D00B9C007 /* KATUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4904DB672442516D00B9C007 /* KATUITests.swift */; };
@@ -19,11 +18,11 @@
 		49ABC37B244EC455000948D7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABC37A244EC455000948D7 /* LogInViewController.swift */; };
 		67180D2C2449717B00E7E513 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67180D2B2449717B00E7E513 /* CameraViewController.swift */; };
 		674004E8245CA5DC005D9C29 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 674004E7245CA5DC005D9C29 /* tessdata */; };
+		6744F775246630E0009CAB8A /* itemBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6744F774246630E0009CAB8A /* itemBill.swift */; };
 		6758BC14244AACC6003F69C7 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */; };
 		A4CE652F8FBBA42E19D7DB92 /* Pods_KAT_KATUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D136FB3979BA872D077B21 /* Pods_KAT_KATUITests.framework */; };
 		CDA5BCFEAE6D4123004BD19B /* Pods_KATTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B6D4E6AFF93114CDFC5EE9 /* Pods_KATTests.framework */; };
 		FA13B22824640301006785B4 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B22724640301006785B4 /* SearchTextField.swift */; };
-		FA13B22E2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13B22D2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		4904DB452442516B00B9C007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4904DB472442516B00B9C007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4904DB4C2442516B00B9C007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4904DB4E2442516D00B9C007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4904DB512442516D00B9C007 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4904DB532442516D00B9C007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4904DB582442516D00B9C007 /* KATTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KATTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +63,7 @@
 		5D54E51E1364E89D8BAE4397 /* Pods-KATTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KATTests.debug.xcconfig"; path = "Target Support Files/Pods-KATTests/Pods-KATTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67180D2B2449717B00E7E513 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		674004E7245CA5DC005D9C29 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		6744F774246630E0009CAB8A /* itemBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemBill.swift; sourceTree = "<group>"; };
 		6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		79D136FB3979BA872D077B21 /* Pods_KAT_KATUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAT_KATUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B6D4E6AFF93114CDFC5EE9 /* Pods_KATTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KATTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +71,6 @@
 		DDD9461A5F2EE090A12E18B5 /* Pods-KAT-KATUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAT-KATUITests.debug.xcconfig"; path = "Target Support Files/Pods-KAT-KATUITests/Pods-KAT-KATUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F91C1ECBD03CAC42006EFEE2 /* Pods-KAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAT.debug.xcconfig"; path = "Target Support Files/Pods-KAT/Pods-KAT.debug.xcconfig"; sourceTree = "<group>"; };
 		FA13B22724640301006785B4 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
-		FA13B22D2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldBulletinPageItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,14 +131,13 @@
 				674004E7245CA5DC005D9C29 /* tessdata */,
 				4904DB4B2442516B00B9C007 /* Main.storyboard */,
 				6758BC13244AACC6003F69C7 /* ItemTableViewCell.swift */,
-				4904DB4E2442516D00B9C007 /* Assets.xcassets */,
 				4904DB502442516D00B9C007 /* LaunchScreen.storyboard */,
 				4904DB532442516D00B9C007 /* Info.plist */,
 				67180D2B2449717B00E7E513 /* CameraViewController.swift */,
 				49ABC378244EB6DC000948D7 /* ItemsViewController.swift */,
+				6744F774246630E0009CAB8A /* itemBill.swift */,
 				FA13B22724640301006785B4 /* SearchTextField.swift */,
 				49ABC37A244EC455000948D7 /* LogInViewController.swift */,
-				FA13B22D2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift */,
 			);
 			path = KAT;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 			files = (
 				4904DB522442516D00B9C007 /* LaunchScreen.storyboard in Resources */,
 				674004E8245CA5DC005D9C29 /* tessdata in Resources */,
-				4904DB4F2442516D00B9C007 /* Assets.xcassets in Resources */,
 				4904DB4D2442516B00B9C007 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,9 +425,9 @@
 				49ABC379244EB6DC000948D7 /* ItemsViewController.swift in Sources */,
 				4904DB462442516B00B9C007 /* AppDelegate.swift in Sources */,
 				49ABC37B244EC455000948D7 /* LogInViewController.swift in Sources */,
+				6744F775246630E0009CAB8A /* itemBill.swift in Sources */,
 				4904DB482442516B00B9C007 /* SceneDelegate.swift in Sources */,
 				FA13B22824640301006785B4 /* SearchTextField.swift in Sources */,
-				FA13B22E2464F9AE006785B4 /* NameTextFieldBulletinPageItem.swift in Sources */,
 				6758BC14244AACC6003F69C7 /* ItemTableViewCell.swift in Sources */,
 				67180D2C2449717B00E7E513 /* CameraViewController.swift in Sources */,
 			);

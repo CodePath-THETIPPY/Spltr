@@ -8,20 +8,20 @@
 import UIKit
 import Contacts
 import SearchTextField
-import BLTNBoard
 
 class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var itemsTableView: UITableView!
 
-    
-    
-    // let nameTextField = SearchTextField(frame: CGRect(x: 10, y: 100, width: 200, height: 40))
+    let bills = [
+        itemBill(name: "SM Calamari", price: 11.98),
+        itemBill(name: "Lobster Roll", price: 25.00),
+        itemBill(name: "Kale Salad - Shrimp", price: 18.00),
+        itemBill(name: "Snapper Entree", price: 28.00),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         itemsTableView.delegate = self
         itemsTableView.dataSource = self
@@ -29,46 +29,24 @@ class ItemsViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // change to correct count from reciept
-        let count = 4
+        let count = bills.count
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = itemsTableView.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemTableViewCell
-        
-        // cell.nameTextField.delegate = self
-        // cell.nameTextField.filterStrings(fetchContacts())
-        
-        if(indexPath.row == 0)
-        {
-            cell.Item.text = "SM Calamari"
-            cell.priceLabel.text = "$11.98"
-            
-            
-        }
-        
-        if(indexPath.row == 1)
-        {
-            cell.Item.text = "Lobster Roll"
-            cell.priceLabel.text = "$25.00"
-            
-            
-        }
-        
-        if(indexPath.row == 2)
-        {
-            cell.Item.text = "Kale Salad - Shrimp"
-            cell.priceLabel.text = "$18.00"
-        }
-        
-        if(indexPath.row == 3)
-        {
-            cell.Item.text = "Snapper Entree"
-            cell.priceLabel.text = "$28.00"
-        }
+
+            let bill = bills[indexPath.row]
+            let string = String(format:"$%.2f", bill.finalPrice)
+            cell.Item.text = bill.itemName
+            cell.price = bill.finalPrice
+            cell.priceLabel.text = string
+
+            print(bill.itemName)
         
         return cell
     }

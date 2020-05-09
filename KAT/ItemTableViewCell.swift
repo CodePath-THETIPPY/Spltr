@@ -19,6 +19,10 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
     
     var contacts = [String]()
     var addingAnotherContact = [String]()
+    var price : Double = 0
+    var count : Double = 1
+    
+    var refresh : Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,16 +31,10 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
         createPickerView()
         dismissPickerView()
         
-        /*
-        addButton.layer.shadowOffset = CGSize(width: 5, height: 5)
-        addButton.layer.shadowRadius = 5
-        addButton.layer.shadowColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        addButton.layer.shadowOpacity = 1.0
-        */
-        
-        // Initialization code
     }
 
+
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -102,7 +100,15 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
         if addingAnotherContact.count > 1 {
             recipientsTextField.text = addingAnotherContact.joined(separator: ", ")
         }
+        
+        count = Double(addingAnotherContact.count)
+        
+        price = newPrice(p: price, c: count)
+        
+        priceLabel.text = String(format:"$%.2f", price)
+        
     }
+    
     
     func createPickerView() {
         let pickerView = UIPickerView()
@@ -126,4 +132,10 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate, UIPickerViewDataS
         self.endEditing(true)
     }
     
+    
+    func newPrice (p: Double, c: Double) -> Double{
+        let finalPrice = p / c
+        return finalPrice
+        
+    }
 }
