@@ -81,4 +81,4 @@ Receipts
 
 Here's a walkthrough of current progress:
 
-<img src='http://g.recordit.co/MQRg4unZXS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/IPvk5npMTh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
